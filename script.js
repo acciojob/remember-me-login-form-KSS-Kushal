@@ -11,7 +11,7 @@ const handleSubmit = (e) => {
 	}else{
 		localStorage.clear();
 	}
-	alert(`Logged in as ${localStorage.getItem('username')}`);
+	alert(`Logged in as ${userNameHTML.value}`);
 	existingHTML.style.display = 'inline-block';
 	userNameHTML.value = "";
 	passwordHTML.value = "";
