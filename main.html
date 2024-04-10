@@ -11,11 +11,11 @@
 	<h1>Login Form</h1>
 	<form onsubmit="handleSubmit(event)">
 		<label for="username">Username:</label>
-		<input id="username" type="text" placeholder="Username" />
+		<input id="username" type="text" placeholder="Username" required />
 		<label for="password">Password:</label>
-		<input id="password" type="password" placeholder="Password" />
+		<input id="password" type="password" placeholder="Password" required />
 		<input type="checkbox" id="checkbox" />
-		<label for="checkbox">Remember me.</label>
+		<label for="checkbox">Remember me:</label>
 		<input type="submit" id="submit" value="Submit" />
 		<button type="button" id="existing">Login as existing user.</button>
 	</form>
