@@ -3,8 +3,21 @@ const userNameHTML = document.getElementById("username");
 const passwordHTML = document.getElementById("password");
 const checkHTML = document.getElementById("checkbox");
 const existingHTML = document.getElementById("existing");
-const handleSubmit = () => {
+const handleSubmit = (e) => {
+	e.preventDefault();
 	if(checkHTML.checked){
-		localStorage.set
+		localStorage.setItem('username', userNameHTML.value);
+		localStorage.setItem('password', passwordHTML.value);
+	}else{
+		localStorage.clear();
 	}
+	alert("Logged in as .");
+	existingHTML.style.display = 'inline-block';
+	userNameHTML.value = "";
+	passwordHTML.value = "";
+	checkHTML.checked = false;
 }
+
+existingHTML.addEventListener("click", ()=>{
+	alert("Logged in as .");
+})
